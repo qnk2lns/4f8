@@ -1,0 +1,7 @@
+{
+    "scripts": {
+        "check:ex1": "node ex1.js",
+        "check:ex2": "node ex2.js",
+        "check:ex3": "node ex3.js"
+    }
+}
