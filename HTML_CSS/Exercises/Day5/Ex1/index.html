@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day5</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 24px 0;
+        }
+
+        main {
+            padding: 12px;
+            width: 100%;
+            max-width: 1280px;
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        figure {
+            width: fit-content;
+            display: inline-block;
+            text-align: center;
+            margin-bottom: 24px;
+
+            div {
+                display: block;
+                width: 0;
+            }
+
+            figcaption {
+                margin-top: 8px;
+                font-size: 12px;
+            }
+
+            &:not(:last-child) {
+                margin-right: 24px;
+            }
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            border: 2px solid orangered;
+        }
+
+        .rectangle {
+            width: 150px;
+            height: 100px;
+            border: 2px solid orangered;
+        }
+
+        .up-triangle {
+            border-width: 0px 50px 100px 50px;
+            border-style: solid;
+            border-color: transparent transparent orangered transparent;
+        }
+
+        .down-triangle {
+            border-width: 100px 50px 0px 50px;
+            border-style: solid;
+            border-color: orangered transparent transparent transparent;
+        }
+
+        .left-triangle {
+            border-width: 50px 100px 50px 0px;
+            border-style: solid;
+            border-color: transparent orangered transparent transparent;
+        }
+
+        .right-triangle {
+            border-width: 50px 0px 50px 100px;
+            border-style: solid;
+            border-color: transparent transparent transparent orangered;
+        }
+
+        .trapezoid {
+            width: 150px;
+            border-width: 0px 30px 100px 30px;
+            border-style: solid;
+            border-color: transparent transparent orangered transparent;
+        }
+
+        .wide-triangle {
+            border-width: 0px 100px 100px 100px;
+            border-style: solid;
+            border-color: transparent transparent orangered transparent;
+        }
+
+        .acute-triangle {
+            border-width: 0px 32px 100px 32px;
+            border-style: solid;
+            border-color: transparent transparent orangered transparent;
+        }
+
+        .iso-triangle {
+            border-width: 0px 80px 100px 80px;
+            border-style: solid;
+            border-color: transparent transparent orangered transparent;
+        }
+
+        .right-arrow {
+            border-width: 50px 100px 50px 100px;
+            border-style: solid;
+            border-color: transparent transparent transparent orangered;
+        }
+
+        .left-arrow {
+            border-width: 50px 100px 50px 100px;
+            border-style: solid;
+            border-color: transparent orangered transparent transparent;
+        }
+
+        .flag-ribbon {
+            border-width: 50px 50px 50px 100px;
+            border-style: solid;
+            border-color: orangered transparent orangered orangered;
+        }
+
+        .f8 {
+            display: block;
+            width: auto;
+            white-space: nowrap;
+            line-height: 0;
+
+            span {
+                display: inline-block;
+                width: auto;
+                line-height: 0;
+
+                &:nth-child(1) {
+                    margin-right: 12px;
+
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        border-style: solid;
+                        border-width: 20px 0 10px 20px;
+                        border-color: orangered transparent orangered orangered;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        border-style: solid;
+                        border-width: 10px 0 0 20px;
+                        border-color: orangered;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        border-style: solid;
+                        border-width: 20px 20px 10px 20px;
+                        border-color: orangered;
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 100px;
+                        height: 100px;
+                        border-style: solid;
+                        border-width: 10px 20px 20px 20px;
+                        border-color: orangered;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <figure>
+            <div class="square" role="img"></div>
+            <figcaption>Hình vuông</figcaption>
+        </figure>
+        <figure>
+            <div class="rectangle" role="img"></div>
+            <figcaption>Hình chữ nhật</figcaption>
+        </figure>
+        <figure>
+            <div class="up-triangle" role="img"></div>
+            <figcaption>Tam giác lên</figcaption>
+        </figure>
+        <figure>
+            <div class="down-triangle" role="img"></div>
+            <figcaption>Tam giác xuống</figcaption>
+        </figure>
+        <figure>
+            <div class="left-triangle" role="img"></div>
+            <figcaption>Tam giác trái</figcaption>
+        </figure>
+        <figure>
+            <div class="right-triangle" role="img"></div>
+            <figcaption>Tam giác phải</figcaption>
+        </figure>
+        <figure>
+            <div class="trapezoid" role="img"></div>
+            <figcaption>Hình thang</figcaption>
+        </figure>
+        <figure>
+            <div class="wide-triangle" role="img"></div>
+            <figcaption>Tam giác rộng</figcaption>
+        </figure>
+        <figure>
+            <div class="acute-triangle" role="img"></div>
+            <figcaption>Tam giác nhọn</figcaption>
+        </figure>
+        <figure>
+            <div class="iso-triangle" role="img"></div>
+            <figcaption>Tam giác cân</figcaption>
+        </figure>
+        <figure>
+            <div class="right-arrow" role="img"></div>
+            <figcaption>Mũi tên phải</figcaption>
+        </figure>
+        <figure>
+            <div class="left-arrow" role="img"></div>
+            <figcaption>Mũi tên trái</figcaption>
+        </figure>
+        <figure>
+            <div class="flag-ribbon" role="img"></div>
+            <figcaption>Ribbon lá cờ</figcaption>
+        </figure>
+        <figure>
+            <div class="f8" role="img">
+                <span></span><span></span>
+            </div>
+            <figcaption>F8</figcaption>
+        </figure>
+    </main>
+</body>
+
+</html>

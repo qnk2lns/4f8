@@ -1,0 +1,246 @@
+nav {
+
+    /* Tất cả link trong menu điều hướng (kể cả submenu) có màu #1d4ed8 */
+    li a {
+        color: #1d4ed8;
+    }
+
+    /* Chỉ các mục menu cấp 1 (không tính submenu) có nền #f1f5f9 */
+    &>ul>li>a {
+        color: #f1f5f9;
+    }
+}
+
+
+h2 {
+    /* Tất cả đoạn văn nằm sau tiêu đề h2 (không cần liền kề) có màu #0f172a */
+    &~p {
+        color: #0f172a;
+    }
+    /* Đoạn văn đầu tiên ngay sau mỗi tiêu đề h2 trong nội dung bài viết có màu #64748b */
+    &+p {
+        color: #64748b;
+    }
+
+}
+
+
+/* Sử dụng CSS Nesting (với ký hiệu &) để viết style cho bài viết: */
+.post {
+
+    /* Link tác giả trong phần thông tin bài viết có màu #f97316 */
+    .author>a {
+        color: #f97316;
+    }
+
+    /* Bài viết có nền white */
+    background-color: white;
+
+    /* Tiêu đề bài viết có màu #0f172a */
+    h1 {
+        color: #0f172a;
+    }
+
+    /* Bài viết nổi bật (có class featured) có nền #fefce8 */
+    &.featured {
+        background-color: #fefce8;
+    }
+
+    &:hover {
+        /* Khi di chuột vào bài viết, bài viết có nền #f8fafc */
+        background-color: #f8fafc;
+
+        /* Khi di chuột vào bài viết, tiêu đề đổi màu #2563eb */
+        h1 {
+            color: #2563eb;
+        }
+    }
+
+    /* Link trong nội dung bài viết: */
+    a {
+        /* Chưa truy cập: màu #2563eb */
+        color: #2563eb;
+
+        /* Đã truy cập: màu #9333ea */
+        &:hover {
+            color: #1e40af;
+        }
+
+        &:active {
+            color: #1e3a8a;
+        }
+
+        &:visited {
+            color: #9333ea;
+        }
+    }
+
+    /* Đoạn văn mở đầu: */
+    .lead {
+
+        /* Dòng đầu tiên có màu #0f172a */
+        &::first-line {
+            color: #0f172a;
+        }
+
+        /* Chữ cái đầu tiên có màu #2563eb */
+        &::first-letter {
+            color: #2563eb;
+        }
+    }
+
+    .quote {
+
+        /* 
+        Khối trích dẫn thêm dấu ngoặc kép " màu #cbd5e1 ở đầu (dùng ::before với content) 
+        Bài 5 cần dùng ... ::after ... với thuộc tính content 
+        */
+        &::before,
+        &::after {
+            content: '"';
+            color: #cbd5e1;
+        }
+    }
+}
+
+
+
+/* Các nút bấm: */
+button {
+
+    /* Nút chính có nền #2563eb, chữ white */
+    &.btn.btn-primary {
+        background-color: #2563eb;
+        color: white;
+    }
+
+    /* Khi di chuột vào nút: nền #3b82f6 */
+    &:hover {
+        background-color: #3b82f6;
+    }
+
+    /* Khi nhấn nút: nền #1d4ed8 */
+    &:active {
+        background-color: #1d4ed8;
+    }
+
+    /* Nút bị vô hiệu hóa: nền #94a3b8, chữ #cbd5e1 */
+    &:disabled {
+        background-color: #94a3b8;
+        color: #cbd5e1;
+    }
+
+    /* Nút có class chứa từ "btn" có nền #e2e8f0 */
+    &[class~="btn"] {
+        background-color: #e2e8f0;
+    }
+}
+
+
+input {
+
+    /* Ô nhập liệu khi được focus có nền #eff6ff */
+    &:focus {
+        background-color: #eff6ff;
+    }
+
+    /* Ô nhập bắt buộc (required) có nền #fffbeb */
+    &:required {
+        background-color: #fffbeb;
+    }
+}
+
+/* Trong bảng so sánh: */
+table {
+    tbody tr {
+
+        /* Các hàng lẻ có nền #f8fafc */
+        &:nth-child(odd) {
+            background-color: #f8fafc;
+        }
+
+        /* Các hàng chẵn có nền white */
+        &:nth-child(even) {
+            background-color: white;
+        }
+
+        /* Hàng cuối cùng có nền #dbeafe */
+        &:last-child {
+            background-color: #dbeafe;
+        }
+
+        /* Hàng trong bảng có độ ưu tiên cao (data-priority="high") có nền #fee2e2 */
+        &[data-priority="high"] {
+            background-color: #fee2e2;
+        }
+    }
+
+    /* Hàng đầu tiên (tiêu đề bảng) có nền #0f172a, chữ white */
+    thead tr {
+        background-color: #0f172a;
+        color: white;
+    }
+}
+
+/* Trong danh sách các bước: */
+.steps {
+    li {
+
+        /* Bước đầu tiên có màu #16a34a */
+        &:first-child {
+            color: #16a34a;
+        }
+
+        /* Bước cuối cùng có màu #dc2626 */
+        &:last-child {
+            color: #dc2626;
+        }
+
+        /* Bước thứ 3 có nền #fef3c7 */
+        &:nth-child(3) {
+            background-color: #fef3c7;
+        }
+
+        /* Danh sách các bước có ký hiệu đầu dòng màu #2563eb (dùng ::marker) */
+        &::marker {
+            color: #2563eb;
+        }
+    }
+}
+
+/* Các widget trong sidebar (trừ widget cuối) có nền white */
+.sidebar .widget:not(:last-child) {
+    background-color: white;
+}
+
+/* Khi bôi đen text, nền chuyển sang #bfdbfe, chữ #0f172a (dùng ::selection) */
+::selection {
+    background-color: #bfdbfe;
+    color: #0f172a;
+}
+
+/* Badge thêm chấm tròn màu #ef4444 ở đầu (dùng ::before với content: "") */
+.badge::before {
+    content: "";
+    display: inline-block;
+    background-color: #ef4444;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+/* Link bắt đầu bằng "https://" có màu #2563eb */
+a[href^="https"] {
+    color: #2563eb;
+}
+
+/* Link tải file PDF có màu #ea580c */
+a[download][href$=".pdf"] {
+    color: #ea580c;
+}
+
+/* Phần tử có thuộc tính lang bắt đầu bằng "vi" có màu #0f172a */
+[lang^="vi"] {
+    color: #0f172a;
+}

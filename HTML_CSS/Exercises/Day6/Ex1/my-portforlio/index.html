@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ly Ngoc Sang - Portfolio</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header id="header" class="app-header">
+        <nav class="app-header__nav" aria-label="Điều hướng chính">
+            <ul class="app-header__nav-list">
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./index.html">
+                        <i class="mdi mdi-home" aria-hidden="true"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./pages/about.html">
+                        <i class="mdi mdi-account" aria-hidden="true"></i>
+                        <span>Giới thiệu</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./pages/skills.html">
+                        <i class="mdi mdi-lightbulb-on-outline" aria-hidden="true"></i>
+                        <span>Kỹ năng</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./pages/projects.html">
+                        <i class="mdi mdi-folder" aria-hidden="true"></i>
+                        <span>Dự án</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./pages/blog.html">
+                        <i class="mdi mdi-post" aria-hidden="true"></i>
+                        <span>Bài viết</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./pages/contact.html">
+                        <i class="mdi mdi-email" aria-hidden="true"></i>
+                        <span>Liên hệ</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="app-main">
+        <section id="hero-section" class="hero-section">
+            <!-- absolute -z-1 in future -->
+            <video class="hero-section__video" src="./videos/hero-background-video.mp4" muted autoplay loop playsinline
+                oncontextmenu="return false;" aria-hidden="true">
+            </video>
+            <!-- content -->
+            <div class="hero-section__content">
+                <h1 class="hero-section__title">
+                    <strong>Ly Ngoc Sang</strong>
+                    <span>Portfolio</span>
+                </h1>
+
+                <p class="hero-section__description">
+                    <em>
+                        Tôi là sinh viên yêu thích lập trình web và thiết kế giao diện người dùng. Tôi tập trung vào
+                        Frontend Development với mục tiêu xây dựng những website rõ ràng, responsive, dễ sử dụng và có
+                        cấu trúc semantic tốt.
+                    </em>
+                </p>
+
+                <div class="hero-section__actions">
+                    <a class="button button--primary" href="./pages/projects.html">
+                        Xem dự án
+                    </a>
+
+                    <a class="button button--secondary" href="./files/Ly-Ngoc-Sang-TopCV.pdf" download>
+                        Tải CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="preview-section" class="preview-section">
+            <h2 class="preview-section__title">Xem trước hồ sơ</h2>
+
+            <article class="preview-card preview-card--about">
+                <h3 class="preview-card__title">
+                    <i class="mdi mdi-account" aria-hidden="true"></i>
+                    <span>Giới thiệu</span>
+                </h3>
+
+                <div class="preview-card__content">
+                    <img class="preview-card__avatar" src="https://i.pravatar.cc/150" loading="lazy" alt="Ly Ngoc Sang">
+
+                    <p class="preview-card__name"><strong>Ly Ngoc Sang</strong></p>
+
+                    <p class="preview-card__description">Tôi đang học và phát triển kỹ năng Frontend với HTML, CSS và
+                        JavaScript. Tôi quan tâm tới semantic HTML, accessibility và cách tổ chức mã nguồn rõ ràng theo
+                        phương pháp BEM.</p>
+
+                    <a class="preview-card__link text-link text-link--more" href="./pages/about.html">Xem thêm...</a>
+                </div>
+            </article>
+
+            <article class="preview-card preview-card--skills">
+                <h3 class="preview-card__title">
+                    <i class="mdi mdi-lightbulb-on-outline" aria-hidden="true"></i>
+                    <span>Kỹ năng</span>
+                </h3>
+
+                <div class="preview-card__content">
+                    <ul class="preview-card__skill-list">
+                        <li class="preview-card__skill-item">
+                            <p class="preview-card__skill-name">HTML</p>
+                            <div class="preview-card__skill-bar" style="--exp: 90%" aria-label="HTML skill level 90%">
+                            </div>
+                        </li>
+
+                        <li class="preview-card__skill-item">
+                            <p class="preview-card__skill-name">CSS</p>
+                            <div class="preview-card__skill-bar" style="--exp: 85%" aria-label="CSS skill level 85%">
+                            </div>
+                        </li>
+
+                        <li class="preview-card__skill-item">
+                            <p class="preview-card__skill-name">JavaScript</p>
+                            <div class="preview-card__skill-bar" style="--exp: 75%"
+                                aria-label="JavaScript skill level 75%"></div>
+                        </li>
+                    </ul>
+
+                    <a class="preview-card__link text-link text-link--more" href="./pages/skills.html">Xem thêm...</a>
+                </div>
+            </article>
+
+            <article class="preview-card preview-card--projects">
+                <h3 class="preview-card__title">
+                    <i class="mdi mdi-folder" aria-hidden="true"></i>
+                    <span>Dự án</span>
+                </h3>
+
+                <div class="preview-card__content">
+                    <ul class="preview-card__project-list">
+                        <li class="preview-card__project-item">
+                            <figure class="preview-card__project-preview">
+                                <img class="preview-card__project-image" src="https://picsum.photos/id/1/800/600"
+                                    loading="lazy" alt="Portfolio cá nhân">
+                                <figcaption class="preview-card__project-title">Portfolio cá nhân</figcaption>
+                            </figure>
+
+                            <p class="preview-card__project-description">Đây là website portfolio cá nhân giới thiệu kỹ
+                                năng, dự án và quá trình học tập của tôi.</p>
+
+                            <div class="preview-card__project-tech">
+                                <p class="preview-card__project-tech-title">Công nghệ sử dụng:</p>
+                                <ul class="preview-card__project-tech-list">
+                                    <li class="preview-card__project-tech-item"><code>HTML</code></li>
+                                    <li class="preview-card__project-tech-item"><code>CSS</code></li>
+                                    <li class="preview-card__project-tech-item"><code>JavaScript</code></li>
+                                </ul>
+                            </div>
+
+                            <a class="preview-card__project-button button button--primary" href="#">Xem chi tiết</a>
+                        </li>
+
+                        <li class="preview-card__project-item">
+                            <figure class="preview-card__project-preview">
+                                <img class="preview-card__project-image" src="https://picsum.photos/id/2/800/600"
+                                    loading="lazy" alt="Xem trước dự án landing page">
+
+                                <figcaption class="preview-card__project-title">Landing page sản phẩm</figcaption>
+                            </figure>
+
+                            <p class="preview-card__project-description">Landing page được xây dựng nhằm luyện tập
+                                layout, typography và responsive design. Tôi sử dụng Flexbox để chia bố cục và tối ưu
+                                hiển thị trên mobile, tablet và desktop.</p>
+
+                            <div class="preview-card__project-tech">
+                                <p class="preview-card__project-tech-title">Công nghệ sử dụng:</p>
+
+                                <ul class="preview-card__project-tech-list">
+                                    <li class="preview-card__project-tech-item">
+                                        <code>HTML</code>
+                                    </li>
+
+                                    <li class="preview-card__project-tech-item">
+                                        <code>CSS</code>
+                                    </li>
+
+                                    <li class="preview-card__project-tech-item">
+                                        <code>Flexbox</code>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a class="preview-card__project-button button button--primary" href="#!">
+                                Xem thêm
+                            </a>
+                        </li>
+
+                        <li class="preview-card__project-item">
+                            <figure class="preview-card__project-preview">
+                                <img class="preview-card__project-image" src="https://picsum.photos/id/3/800/600"
+                                    loading="lazy" alt="Xem trước ứng dụng quản lý công việc">
+
+                                <figcaption class="preview-card__project-title">Ứng dụng quản lý công việc</figcaption>
+                            </figure>
+
+                            <p class="preview-card__project-description">Đây là project quản lý công việc với chức năng
+                                tạo, cập nhật và theo dõi task. Project giúp tôi luyện tập cách tạo UI component và làm
+                                việc với dữ liệu động.</p>
+
+                            <div class="preview-card__project-tech">
+                                <p class="preview-card__project-tech-title">Công nghệ sử dụng:</p>
+
+                                <ul class="preview-card__project-tech-list">
+                                    <li class="preview-card__project-tech-item">
+                                        <code>Java Spring Boot</code>
+                                    </li>
+
+                                    <li class="preview-card__project-tech-item">
+                                        <code>Thymeleaf</code>
+                                    </li>
+
+                                    <li class="preview-card__project-tech-item">
+                                        <code>MySQL</code>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <a class="preview-card__project-button button button--primary" href="#!">
+                                Xem chi tiết
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a class="preview-card__link text-link text-link--more" href="./pages/projects.html">
+                        Xem thêm...
+                    </a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer id="footer" class="app-footer">
+        <p class="app-footer__copyright">
+            &copy; lnsanq.dev - 2026
+        </p>
+
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="Facebook">
+                    <i class="mdi mdi-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="YouTube">
+                    <i class="mdi mdi-youtube" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="Instagram">
+                    <i class="mdi mdi-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

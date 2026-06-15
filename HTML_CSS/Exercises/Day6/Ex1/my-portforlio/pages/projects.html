@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dự án - Ly Ngoc Sang</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header id="header" class="app-header">
+
+        <nav class="app-header__nav" aria-label="Điều hướng chính">
+
+            <ul class="app-header__nav-list">
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="../index.html">
+                        <i class="mdi mdi-home" aria-hidden="true"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./about.html">
+                        <i class="mdi mdi-account" aria-hidden="true"></i>
+                        <span>Giới thiệu</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./skills.html">
+                        <i class="mdi mdi-lightbulb-on-outline" aria-hidden="true"></i>
+                        <span>Kỹ năng</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./projects.html">
+                        <i class="mdi mdi-folder" aria-hidden="true"></i>
+                        <span>Dự án</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./blog.html">
+                        <i class="mdi mdi-post" aria-hidden="true"></i>
+                        <span>Bài viết</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./contact.html">
+                        <i class="mdi mdi-email" aria-hidden="true"></i>
+                        <span>Liên hệ</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main id="main" class="app-main">
+
+        <h1 class="app-main__title">
+            Dự án
+        </h1>
+
+        <section id="frontend-projects" class="project-section">
+
+            <h2 class="project-section__title">
+                Dự án Frontend
+            </h2>
+
+            <ul class="project-list">
+
+                <li class="project-card">
+
+                    <figure class="project-card__thumbnail">
+
+                        <img class="project-card__image" src="https://picsum.photos/800/600" loading="lazy"
+                            alt="Ảnh thu nhỏ portfolio cá nhân">
+
+                        <figcaption class="project-card__caption">
+                            Portfolio cá nhân
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="project-card__content">
+
+                        <h3 class="project-card__title">
+                            <strong>Portfolio cá nhân</strong>
+                        </h3>
+
+                        <p class="project-card__description">
+                            Đây là project portfolio cá nhân giúp tôi luyện tập
+                            cách xây dựng website nhiều trang với cấu trúc semantic HTML rõ ràng.
+                        </p>
+
+                        <p class="project-card__description">
+                            Trong project này, tôi luyện tập cách chia page
+                            thành các section hợp lý, sử dụng BEM để đặt tên class,
+                            đồng thời đảm bảo navigation và footer thống nhất giữa các trang.
+                        </p>
+
+                        <div class="project-card__tech">
+
+                            <h4 class="project-card__subheading">
+                                Công nghệ sử dụng
+                            </h4>
+
+                            <ul class="project-card__tech-list">
+                                <li class="project-card__tech-item">
+                                    <code>HTML</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>CSS</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>JavaScript</code>
+                                </li>
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__features">
+
+                            <h4 class="project-card__subheading">
+                                Tính năng chính
+                            </h4>
+
+                            <ul class="project-card__feature-list">
+
+                                <li class="project-card__feature-item">
+                                    Trang chủ giới thiệu tổng quan.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Các trang About, Skills, Projects, Blog và Liên hệ.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    <mark>
+                                        Class naming theo BEM để dễ maintain.
+                                    </mark>
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Responsive layout cho nhiều kích thước màn hình.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__links">
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Xem demo
+                            </a>
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Mã nguồn
+                            </a>
+
+                        </div>
+
+                        <iframe class="project-card__iframe" width="100%" height="auto"
+                            src="https://www.youtube.com/embed/zEWSSod0zTY?si=w8RMmAfOSMGc9AAP"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </li>
+
+                <li class="project-card">
+
+                    <figure class="project-card__thumbnail">
+
+                        <img class="project-card__image" src="https://picsum.photos/800/600" loading="lazy"
+                            alt="Ảnh thu nhỏ dự án landing page">
+
+                        <figcaption class="project-card__caption">
+                            Landing page
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="project-card__content">
+
+                        <h3 class="project-card__title">
+                            <strong>Landing page sản phẩm</strong>
+                        </h3>
+
+                        <p class="project-card__description">
+                            Landing page sản phẩm là project luyện tập cách
+                            xây dựng giao diện giới thiệu sản phẩm với bố cục rõ ràng,
+                            phần hero nổi bật, danh sách tính năng và khu vực kêu gọi hành động.
+                        </p>
+
+                        <p class="project-card__description">
+                            Project giúp tôi hiểu rõ hơn về spacing,
+                            visual hierarchy, button style và cách tổ chức nội dung
+                            để người dùng dễ đọc, dễ hiểu.
+                        </p>
+
+                        <div class="project-card__tech">
+
+                            <h4 class="project-card__subheading">
+                                Công nghệ sử dụng
+                            </h4>
+
+                            <ul class="project-card__tech-list">
+
+                                <li class="project-card__tech-item">
+                                    <code>HTML</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>CSS</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>Flexbox</code>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__features">
+
+                            <h4 class="project-card__subheading">
+                                Tính năng chính
+                            </h4>
+
+                            <ul class="project-card__feature-list">
+
+                                <li class="project-card__feature-item">
+                                    Hero section với tiêu đề và CTA.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Danh sách tính năng sản phẩm.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    <mark>
+                                        Layout responsive cho mobile.
+                                    </mark>
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Footer chứa social links.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__links">
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Xem demo
+                            </a>
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Mã nguồn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="project-card">
+
+                    <figure class="project-card__thumbnail">
+
+                        <img class="project-card__image" src="https://picsum.photos/800/600" loading="lazy"
+                            alt="Ảnh thu nhỏ ứng dụng Todo">
+
+                        <figcaption class="project-card__caption">
+                            Ứng dụng Todo
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="project-card__content">
+
+                        <h3 class="project-card__title">
+                            <strong>Ứng dụng Todo List</strong>
+                        </h3>
+
+                        <p class="project-card__description">
+                            Ứng dụng Todo List là project giúp tôi luyện tập
+                            JavaScript cơ bản thông qua việc thêm, xoá và đánh dấu công việc.
+                            Đây là project nhỏ nhưng rất hữu ích để hiểu DOM và event.
+                        </p>
+
+                        <p class="project-card__description">
+                            Tôi cũng học cách chia nhỏ UI thành các phần
+                            như form nhập liệu, danh sách task và trạng thái hoàn thành
+                            để code dễ đọc hơn.
+                        </p>
+
+                        <div class="project-card__tech">
+
+                            <h4 class="project-card__subheading">
+                                Công nghệ sử dụng
+                            </h4>
+
+                            <ul class="project-card__tech-list">
+
+                                <li class="project-card__tech-item">
+                                    <code>HTML</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>CSS</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>JavaScript</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>DOM</code>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__features">
+
+                            <h4 class="project-card__subheading">
+                                Tính năng chính
+                            </h4>
+
+                            <ul class="project-card__feature-list">
+
+                                <li class="project-card__feature-item">
+                                    Thêm task mới.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Xoá task khỏi danh sách.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Đánh dấu task đã hoàn thành.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    <mark>
+                                        Lưu trạng thái task bằng localStorage.
+                                    </mark>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__links">
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Xem demo
+                            </a>
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Mã nguồn
+                            </a>
+
+                        </div>
+
+                        <iframe class="project-card__iframe" width="100%" height="auto"
+                            src="https://www.youtube.com/embed/zEWSSod0zTY?si=w8RMmAfOSMGc9AAP"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section id="mobile-projects" class="project-section">
+
+            <h2 class="project-section__title">
+                Dự án Mobile
+            </h2>
+
+            <ul class="project-list">
+
+                <li class="project-card">
+
+                    <figure class="project-card__thumbnail">
+
+                        <img class="project-card__image" src="https://picsum.photos/800/600" loading="lazy"
+                            alt="Ảnh thu nhỏ ứng dụng thời tiết">
+
+                        <figcaption class="project-card__caption">
+                            Ứng dụng thời tiết
+                        </figcaption>
+
+                    </figure>
+
+                    <div class="project-card__content">
+
+                        <h3 class="project-card__title">
+                            <strong>Mobile Ứng dụng thời tiết UI</strong>
+                        </h3>
+
+                        <p class="project-card__description">
+                            Mobile Ứng dụng thời tiết UI là project luyện tập
+                            thiết kế giao diện mobile cho ứng dụng thời tiết.
+                            Project tập trung vào card layout,
+                            icon thời tiết và cách hiển thị thông tin ngắn gọn.
+                        </p>
+
+                        <p class="project-card__description">
+                            Giao diện được xây dựng theo hướng đơn giản,
+                            dễ nhìn và phù hợp với màn hình nhỏ.
+
+                            Đây là project giúp tôi luyện thêm responsive design
+                            và UI composition.
+                        </p>
+
+                        <div class="project-card__tech">
+
+                            <h4 class="project-card__subheading">
+                                Công nghệ sử dụng
+                            </h4>
+
+                            <ul class="project-card__tech-list">
+
+                                <li class="project-card__tech-item">
+                                    <code>HTML</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>CSS</code>
+                                </li>
+
+                                <li class="project-card__tech-item">
+                                    <code>Responsive Design</code>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__features">
+
+                            <h4 class="project-card__subheading">
+                                Tính năng chính
+                            </h4>
+
+                            <ul class="project-card__feature-list">
+
+                                <li class="project-card__feature-item">
+                                    Giao diện tối ưu cho mobile.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Card hiển thị nhiệt độ và trạng thái thời tiết.
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    <mark>
+                                        Thiết kế đơn giản, dễ scan thông tin.
+                                    </mark>
+                                </li>
+
+                                <li class="project-card__feature-item">
+                                    Danh sách dự báo theo ngày.
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="project-card__links">
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Xem demo
+                            </a>
+
+                            <a class="project-card__link text-link" href="#!" target="_blank" rel="noopener noreferrer">
+                                Mã nguồn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <footer id="footer" class="app-footer">
+
+        <p class="app-footer__copyright">
+            &copy; lnsanq.dev - 2026
+        </p>
+
+        <ul class="social-list">
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+
+                    <i class="mdi mdi-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+
+                    <i class="mdi mdi-youtube" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+
+                    <i class="mdi mdi-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+
+        </ul>
+
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

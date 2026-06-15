@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài viết - Ly Ngoc Sang</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header id="header" class="app-header">
+        <nav class="app-header__nav" aria-label="Điều hướng chính">
+            <ul class="app-header__nav-list">
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="../">
+                        <i class="mdi mdi-home" aria-hidden="true"></i>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./about.html">
+                        <i class="mdi mdi-account" aria-hidden="true"></i>
+                        <span>Giới thiệu</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./skills.html">
+                        <i class="mdi mdi-lightbulb-on-outline" aria-hidden="true"></i>
+                        <span>Kỹ năng</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./projects.html">
+                        <i class="mdi mdi-folder" aria-hidden="true"></i>
+                        <span>Dự án</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./blog.html">
+                        <i class="mdi mdi-post" aria-hidden="true"></i>
+                        <span>Bài viết</span>
+                    </a>
+                </li>
+
+                <li class="app-header__nav-item">
+                    <a class="app-header__nav-link" href="./contact.html">
+                        <i class="mdi mdi-email" aria-hidden="true"></i>
+                        <span>Liên hệ</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" class="app-main">
+        <article class="blog-article">
+
+            <header class="blog-article__header">
+                <h1 class="blog-article__title">
+                    Viết HTML semantic giúp code dễ maintain hơn như thế nào?
+                </h1>
+
+                <p class="blog-article__meta">
+                    Đăng ngày
+                    <time datetime="2026-05-08">May 8, 2026</time>
+                    bởi <strong>Ly Ngoc Sang</strong>
+                </p>
+
+                <img class="blog-article__cover" src="https://picsum.photos/1920/1080" width="100%" height="auto"
+                    alt="Minh họa HTML semantic và mã sạch">
+            </header>
+
+            <nav class="table-of-contents" aria-label="Mục lục">
+                <h2 class="table-of-contents__title">Mục lục</h2>
+
+                <ol class="table-of-contents__list">
+                    <li class="table-of-contents__item">
+                        <a class="table-of-contents__link" href="#intro">
+                            Giới thiệu
+                        </a>
+                    </li>
+
+                    <li class="table-of-contents__item">
+                        <a class="table-of-contents__link" href="#semantic-html">
+                            Semantic HTML là gì?
+                        </a>
+                    </li>
+
+                    <li class="table-of-contents__item">
+                        <a class="table-of-contents__link" href="#keyboard-shortcuts">
+                            Thói quen code hiệu quả
+                        </a>
+                    </li>
+
+                    <li class="table-of-contents__item">
+                        <a class="table-of-contents__link" href="#quote">
+                            Trích dẫn
+                        </a>
+                    </li>
+
+                    <li class="table-of-contents__item">
+                        <a class="table-of-contents__link" href="#code-examples">
+                            Ví dụ mã
+                        </a>
+                    </li>
+
+                    <li class="table-of-contents__item">
+                        <a class="table-of-contents__link" href="#references">
+                            Tham khảo
+                        </a>
+                    </li>
+
+                    <li class="table-of-contents__item">
+                        <a class="table-of-contents__link" href="#author">
+                            Thông tin tác giả
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+
+            <section id="intro" class="blog-section">
+                <h2 class="blog-section__title">Giới thiệu</h2>
+
+                <p class="blog-section__paragraph">
+                    Khi mới học lập trình web, nhiều người thường chỉ quan tâm đến việc giao diện có hiển thị đúng hay
+                    không.
+                    Tuy nhiên, khi project lớn dần, cách viết HTML sẽ ảnh hưởng rất nhiều đến khả năng đọc hiểu,
+                    bảo trì và mở rộng source code.
+                </p>
+
+                <p class="blog-section__paragraph">
+                    Một trang web không chỉ cần đẹp, mà còn cần có cấu trúc rõ ràng.
+                    Đây là lý do <strong>semantic HTML</strong> trở thành nền tảng quan trọng với developer Frontend.
+
+                    Khi sử dụng đúng các thẻ như
+                    <code>&lt;header&gt;</code>,
+                    <code>&lt;main&gt;</code>,
+                    <code>&lt;section&gt;</code>
+                    và
+                    <code>&lt;article&gt;</code>,
+                    code sẽ dễ hiểu hơn cho cả người đọc lẫn trình duyệt.
+                </p>
+            </section>
+
+            <section id="semantic-html" class="blog-section">
+                <h2 class="blog-section__title">Semantic HTML là gì?</h2>
+
+                <p class="blog-section__paragraph">
+                    Semantic HTML là cách dùng thẻ HTML dựa trên ý nghĩa của nội dung,
+                    không chỉ dựa trên mục đích styling.
+
+                    Ví dụ:
+                    phần điều hướng nên dùng <code>&lt;nav&gt;</code>,
+                    nội dung chính nên nằm trong <code>&lt;main&gt;</code>,
+                    còn một bài viết độc lập nên dùng <code>&lt;article&gt;</code>.
+                </p>
+
+                <p class="blog-section__paragraph">
+                    Khi code semantic tốt, người khác có thể nhìn vào HTML và hiểu ngay cấu trúc trang.
+
+                    <em>
+                        Điều này đặc biệt quan trọng khi làm việc nhóm hoặc quay lại sửa project sau một thời gian dài.
+                    </em>
+
+                    Thay vì chỉ có nhiều thẻ <code>&lt;div&gt;</code>,
+                    bạn sẽ có một outline rõ ràng và dễ scan hơn.
+                </p>
+
+                <p class="blog-section__paragraph">
+                    Một lợi ích khác là accessibility.
+
+                    Screen reader và các công cụ hỗ trợ có thể hiểu tốt hơn nếu trang
+                    được chia bằng landmark đúng.
+
+                    <mark>
+                        HTML semantic tốt là bước đầu tiên để tạo website dễ tiếp cận hơn.
+                    </mark>
+                </p>
+            </section>
+
+            <section id="keyboard-shortcuts" class="blog-section">
+                <h2 class="blog-section__title">Thói quen code hiệu quả</h2>
+
+                <p class="blog-section__paragraph">
+                    Ngoài semantic HTML, developer cũng nên hình thành thói quen làm việc nhất quán.
+
+                    Ví dụ, sau khi chỉnh sửa file,
+                    tôi thường dùng <kbd>Ctrl</kbd> + <kbd>S</kbd> để lưu nhanh,
+                    sau đó kiểm tra giao diện trên trình duyệt.
+                </p>
+
+                <p class="blog-section__paragraph">
+                    Khi chạy thử code JavaScript,
+                    output có thể được in ra console.
+
+                    Ví dụ kết quả:
+                    <samp>Form submitted successfully</samp>.
+
+                    Những phản hồi nhỏ như vậy giúp debug nhanh và kiểm tra logic dễ hơn.
+                </p>
+            </section>
+
+            <section id="quote" class="blog-section">
+                <h2 class="blog-section__title">Trích dẫn</h2>
+
+                <blockquote class="blog-quote">
+                    <p class="blog-quote__text">
+                        “Programs must be written for people to read,
+                        and only incidentally for machines to execute.”
+                    </p>
+
+                    <footer class="blog-quote__footer">
+                        —
+                        <cite>
+                            Harold Abelson and Gerald Jay Sussman,
+                            Structure and Interpretation of Computer Programs
+                        </cite>
+                    </footer>
+                </blockquote>
+            </section>
+
+            <section id="code-examples" class="blog-section">
+                <h2 class="blog-section__title">Ví dụ mã</h2>
+
+                <p class="blog-section__paragraph">
+                    Ví dụ đầu tiên là một cấu trúc HTML semantic đơn giản cho một trang web cá nhân.
+                </p>
+
+                <pre class="code-block"><code>&lt;!-- HTML semantic layout example --&gt;
+&lt;header class="app-header"&gt;
+    &lt;nav class="app-header__nav"&gt;
+        &lt;!-- Main navigation links --&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main class="app-main"&gt;
+    &lt;h1&gt;About me&lt;/h1&gt;
+
+    &lt;section class="about-profile"&gt;
+        &lt;h2&gt;Về tôi&lt;/h2&gt;
+        &lt;p&gt;Short introduction content...&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+</code></pre>
+
+                <p class="blog-section__paragraph">
+                    Ví dụ thứ hai là cách đặt tên class theo BEM
+                    để tránh class quá chung chung và khó maintain.
+                </p>
+
+                <pre class="code-block"><code>/* BEM naming example */
+.project-card {
+    /* Block style */
+}
+
+.project-card__title {
+    /* Element style */
+}
+
+.project-card__button {
+    /* Element style */
+}
+
+.project-card--featured {
+    /* Modifier style */
+}
+</code></pre>
+
+                <p class="blog-section__paragraph">
+                    Ví dụ thứ ba là một đoạn JavaScript nhỏ để kiểm tra form submit.
+                </p>
+
+                <pre class="code-block"><code>// JavaScript form submit example
+const contactForm = document.querySelector(".contact-form");
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Show success message after submit
+    console.log("Form submitted successfully");
+});
+</code></pre>
+            </section>
+
+            <section id="references" class="blog-section">
+                <h2 class="blog-section__title">Tham khảo</h2>
+
+                <ul class="reference-list">
+
+                    <li class="reference-list__item">
+                        <a class="reference-list__link text-link"
+                            href="https://developer.mozilla.org/en-US/docs/Glossary/Semantics" target="_blank"
+                            rel="noopener noreferrer">
+                            <cite>MDN Web Docs - Semantics</cite>
+                        </a>
+                    </li>
+
+                    <li class="reference-list__item">
+                        <a class="reference-list__link text-link"
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank"
+                            rel="noopener noreferrer">
+                            <cite>MDN Web Docs - HTML elements reference</cite>
+                        </a>
+                    </li>
+
+                    <li class="reference-list__item">
+                        <a class="reference-list__link text-link" href="https://getbem.com/naming/" target="_blank"
+                            rel="noopener noreferrer">
+                            <cite>BEM Naming Convention</cite>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section id="author" class="author-section">
+                <h2 class="author-section__title">Thông tin tác giả</h2>
+
+                <div class="author-card">
+
+                    <img class="author-card__avatar" src="https://i.pravatar.cc/150" alt="Ảnh đại diện Ly Ngoc Sang">
+
+                    <div class="author-card__content">
+
+                        <h3 class="author-card__name">
+                            Ly Ngoc Sang
+                        </h3>
+
+                        <p class="author-card__description">
+                            Người học Frontend thích xây dựng giao diện web semantic,
+                            sạch và dễ bảo trì.
+                        </p>
+
+                        <address class="author-card__contact">
+                            Liên hệ:
+
+                            <a class="author-card__link text-link" href="mailto:contact@lnsanq.dev">
+                                contact@lnsanq.dev
+                            </a>
+                        </address>
+
+                    </div>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <footer id="footer" class="app-footer">
+
+        <p class="app-footer__copyright">
+            &copy; lnsanq.dev - 2026
+        </p>
+
+        <ul class="social-list">
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="mdi mdi-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="mdi mdi-youtube" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="social-list__item">
+                <a class="social-list__link" href="#!" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="mdi mdi-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+
+        </ul>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

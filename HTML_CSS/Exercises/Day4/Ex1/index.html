@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trung tâm cấu hình giao diện</title>
+    <style>
+        * {
+            margin-inline: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin-inline: auto;
+            border: 2px solid orange;
+            border-radius: 6px;
+            overflow: hidden;
+
+            h1 {
+                margin-top: 0;
+                padding: 8px;
+                background-color: orange;
+                color: white;
+                font-size: 18px;
+            }
+
+            p {
+                margin-bottom: 4px;
+
+                &:last-child {
+                    margin-bottom: revert;
+                }
+            }
+
+            .control-box {
+                padding-inline: 20px;
+
+                .preview {
+                    color: gray;
+                    background-color: white;
+                }
+            }
+
+        }
+
+        .container .control-box .control {
+            display: none;
+
+            &+label {
+                padding: 4px 8px;
+                border: solid 2px currentColor;
+                border-radius: 50px;
+                font-size: 14px;
+                cursor: pointer;
+                user-select: none;
+                display: inline-block;
+                margin-top: 4px;
+            }
+
+            &[type="radio"][name="theme"] {
+                &[value="light"]:checked {
+                    &+label {
+                        background-color: lightyellow;
+                        color: brown;
+
+                    }
+
+                    &~.preview.theme-light {
+                        background-color: lightyellow;
+                        color: brown;
+                    }
+                }
+
+                &[value="dark"]:checked {
+                    &+label {
+                        background-color: black;
+                        color: yellow;
+
+                    }
+
+                    &~.preview.theme-dark {
+                        background-color: black;
+                        color: yellow;
+                    }
+                }
+            }
+
+            &[type="radio"][name="color"] {
+                &[value="red"]:checked {
+                    &+label {
+                        background-color: rgba(255, 0, 0, 0.1);
+                        color: red;
+                    }
+
+                    &~.preview.color-red {
+                        background-color: rgba(255, 0, 0, 0.1);
+                        color: red;
+                    }
+                }
+
+                &[value="green"]:checked {
+                    &+label {
+                        background-color: rgba(0, 128, 0, 0.1);
+                        color: green;
+                    }
+
+                    &~.preview.color-green {
+                        background-color: rgba(0, 128, 0, 0.1);
+                        color: green;
+                    }
+                }
+
+                &[value="blue"]:checked {
+                    &+label {
+                        background-color: rgba(0, 0, 255, 0.1);
+                        color: blue;
+                    }
+
+                    &~.preview.color-blue {
+                        background-color: rgba(0, 0, 255, 0.1);
+                        color: blue;
+                    }
+                }
+            }
+
+            &[type="radio"][name="lang"] {
+                &[value="vi"]:checked {
+                    &+label {
+                        background-color: rgba(0, 128, 0, 0.1);
+                        color: green;
+                        font-weight: 600;
+                    }
+
+                    &~.preview.lang-vi {
+                        background-color: rgba(0, 128, 0, 0.1);
+                        color: green;
+                        font-weight: 600;
+                    }
+                }
+
+                &[value="en"]:checked {
+                    &+label {
+                        background-color: rgba(0, 128, 0, 0.1);
+                        color: green;
+                        font-weight: 600;
+                    }
+
+                    &~.preview.lang-en {
+                        background-color: rgba(0, 128, 0, 0.1);
+                        color: green;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &[type="checkbox"] {
+                &:checked+label {
+                    display: inline-block;
+                    background-color: lightyellow;
+                    color: brown;
+                }
+
+                &:checked+label::before {
+                    content: "✔";
+                    margin-right: 4px;
+                }
+
+                &[name="option_adDesc"]:checked~.preview.opt-ad-desc {
+                    background-color: lightyellow;
+                    color: brown;
+                }
+            }
+
+            &[type="checkbox"][name="option_ecoMode"]:checked~.preview.opt-eco-mode {
+                background-color: lightyellow;
+                color: brown;
+            }
+
+            &[type="checkbox"][name="option_showAlert"]:checked~.preview.opt-show-alert {
+                background-color: lightyellow;
+                color: brown;
+            }
+        }
+
+        .container .control-box .preview {
+            padding: 8px 12px;
+            border: 1px solid currentColor;
+            border-radius: 8px;
+            font-size: 14px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Trung tâm cấu hình giao diện</h1>
+        <div class="control-box">
+            <p>Theme:</p>
+
+            <input type="radio" class="control" name="theme" value="light" id="theme_light" checked>
+            <label for="theme_light">Light</label>
+
+            <input type="radio" class="control" name="theme" value="dark" id="theme_dark">
+            <label for="theme_dark">Dark</label>
+
+            <p>Màu chủ đạo:</p>
+
+            <input type="radio" class="control" name="color" value="red" id="color_red" checked>
+            <label for="color_red">Red</label>
+
+            <input type="radio" class="control" name="color" value="green" id="color_green">
+            <label for="color_green">Green</label>
+
+            <input type="radio" class="control" name="color" value="blue" id="color_blue">
+            <label for="color_blue">Blue</label>
+
+            <p>Ngôn ngữ hiển thị:</p>
+
+            <input type="radio" class="control" name="lang" value="vi" id="lang_vi" checked>
+            <label for="lang_vi">Vietnamese</label>
+
+            <input type="radio" class="control" name="lang" value="en" id="lang_en">
+            <label for="lang_en">English</label>
+
+            <p>Tùy chọn bổ sung:</p>
+
+            <input type="checkbox" class="control" name="option_adDesc" id="option_adDesc">
+            <label for="option_adDesc">Hiển thị mô tả nâng cao</label>
+
+            <input type="checkbox" class="control" name="option_ecoMode" id="option_ecoMode">
+            <label for="option_ecoMode">Eco Mode</label>
+
+            <input type="checkbox" class="control" name="option_showAlert" id="option_showAlert">
+            <label for="option_showAlert">Hiển thị cảnh báo</label>
+            <hr style="margin-top: 20px;" />
+            <p class="preview theme-light">Theme Light: Giao diện sáng - chữ đen</p>
+            <p class="preview theme-dark">Theme Dark: Giao diện tối - chữ sáng</p>
+            <hr />
+            <p class="preview color-red">[RED]: Được nhấn mạnh khi chọn</p>
+            <p class="preview color-green">[GREEN]: Được nhấn mạnh khi chọn</p>
+            <p class="preview color-blue">[BLUE]: Được nhấn mạnh khi chọn</p>
+            <hr />
+            <p class="preview lang-vi">[VI]: Xin chào các bạn!</p>
+            <p class="preview lang-en">[EN]: Hi guys!</p>
+            <hr />
+            <p class="preview opt-ad-desc">Mô tả nâng cao đang được hiển thị</p>
+            <p class="preview opt-eco-mode">Trạng thái tiết kiệm tài nguyên đang được bật</p>
+            <p class="preview opt-show-alert">Cảnh báo đã được thiết lập để hiển thị</p>
+        </div>
+    </main>
+</body>
+
+</html>

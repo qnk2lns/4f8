@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #ebf5fe;
+    color: #666666;
+}
+
+main {
+    width: 100%;
+    max-width: 1140px;
+    margin-inline: auto;
+    padding: 24px 0;
+
+    h1 { /* trick bat chuoc tailwind sr-only */
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.service {
+    width: calc(((100% - (var(--gap) * (var(--cols) - 1)))) / var(--cols)); /* trick lo? edit columns va` gap so easy with this way */
+    padding: 30px;
+    background-color: #fff;
+    border: 3px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.050);
+    cursor: pointer;
+    transition: border-color 200ms ease-in-out;
+
+    &:hover {
+        border: 3px solid var(--theme-color);
+    }
+
+    .service__header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+
+        .service__icon {
+            width: 60px;
+            aspect-ratio: 1/1;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(90deg, var(--theme-color), color-mix(in srgb, var(--theme-color), #ffff00 25%));
+            border: 0px solid var(--theme-color); /* set border width 0 truoc' chi? de^? transition nha^.n hie^.u u'ng */
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 24px 8px color-mix(in srgb, var(--theme-color), transparent 70%);
+            font-size: 32px;
+            color: #ffffff;
+            transition: border 200ms ease-in-out;
+
+            &:hover {
+                border: 3px solid var(--theme-color);
+            }
+
+            i {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .service__title {
+            margin-block: 20px 15px;
+            color: #333333;
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: 600;
+
+            &::first-line {
+                word-spacing: 99rem; /* trick lo? dam? bao? tie^u de^` du? 2 do`ng */
+            }
+        }
+    }
+
+    .service__content {
+        margin-bottom: 20px;
+        color: inherit;
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        line-clamp: 3;
+        -webkit-line-clamp: 3; /* combo dam? bao? 3 do`ng ok */
+        
+    }
+
+    .service__footer {
+        .service__view {
+            color: #2196f3;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            text-decoration-color: transparent;
+            transition: text-decoration-color 200ms ease-in-out;
+
+            &:hover {
+                text-decoration: underline;
+                text-decoration-thickness: 1.5px;
+                text-underline-offset: 0.15em;
+                text-decoration-color: currentColor;
+            }
+        }
+    }
+}
