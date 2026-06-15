@@ -15,7 +15,7 @@ git clone --filter=blob:none --sparse https://github.com/qnk2lns/4f8.git qnk2lns
 cd qnk2lns_4f8_day2
 git sparse-checkout set JS/Exercises/Day2
 ```
-4. Run code scripts
+2. Run code scripts
 - `npm run check:ex1` to check my ex1
 - `npm run check:ex2` to check my ex2
 - `npm run check:ex3` to check my ex3
