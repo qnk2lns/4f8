@@ -11,7 +11,7 @@
  *   age: number,
  *   email: string,
  *   score: number,
- *   role: 'player' | 'admin' | string
+ *   role: 'member' | 'admin' | string
  * }} user
  * @returns {{
  *   displayName: string,
