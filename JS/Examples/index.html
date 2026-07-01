@@ -1,12 +1,17 @@
-<script>
-let a = '5';
-let b = 5;
+<!DOCTYPE html>
+<html lang="en">
 
-if (a == b) {
- console.log('bằng nhau (==)');
-}
-if (a === b) {
- console.log('bằng nhau (===)');
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-</script>
+<body>
+    <script>
+        const name = '  nguyen    van   a  '
+        console.log(name.trim().split(/\s+/g).map(word => word.at(0).toUpperCase().concat(word.slice(1).toLowerCase())).join(' '))
+    </script>
+</body>
+
+</html>
