@@ -11,7 +11,7 @@
 1. Clone This Folder to your PC
 ```cmd
 git clone --filter=blob:none --sparse https://github.com/qnk2lns/4f8.git qnk2lns_4f8_day16
-cd qnk2lns_4f8_day16
+cd qnk2lns_4f8_Day16
 git sparse-checkout set JS/Exercises/Day16
 ```
 2. Run code scripts
